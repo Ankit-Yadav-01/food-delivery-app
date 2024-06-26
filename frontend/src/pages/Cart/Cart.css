@@ -1,0 +1,91 @@
+.cart{
+    margin-top: 100px;
+}
+.cart-items-title{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: grey;
+    font-size: max(1vw,12px);
+
+}
+.cart-items-item{
+    margin:10px 0px;
+    color: black;
+}
+.cart-items-item img{
+    width:50px;
+
+}
+.cart hr{
+    height:1px;
+    background-color: aliceblue;
+    border: none;
+}
+.cart-items-item .remove-from-cart{
+    cursor: pointer;
+}
+.cart-bottom{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between ;
+    gap: max(12vw,20px);
+}
+/*
+In CSS, flex: 1 is a shorthand property for flex-grow, flex-shrink, and flex-basis. It is used in a flex container to make an element flexible and allow it to grow and shrink as needed to fill the available space. Here's a breakdown of what flex: 1 represents:
+*/
+.cart-total{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.cart-total-details{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(10, 8, 12);
+}
+.cart-total hr{
+    margin:10px 0px;
+}
+.cart-total button{
+    border: none;
+    color: white;
+    background-color: rgb(239, 90, 64);
+    width:max(15vw,200px);
+    padding :12px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-promocode{
+    flex:1;
+
+}
+.cart-promocode p{
+    color:grey(10, 8, 12);
+}
+.cart-promocode-input input{
+    width:max(15vw,200px);
+    height: max(2vh,40px);
+    background-color: rgb(215, 214, 214);
+    border: none;
+    outline:none;
+    padding-left: 10px;
+}
+.cart-promocode-input button{
+    width:max(8vw,120px);
+    padding:12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+
+}
+@media(max-width:750px){
+    .cart-bottom{
+        flex-direction: column-reverse;
+    }
+    .cart-promocode{
+        justify-content: start;
+    }
+}
